@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandwich Maker Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sandwich Maker Simulation</h1>
+
+        <div class="controls">
+            <label>Select Ingredients:</label>
+            <div id="ingredients">
+                <label><input type="checkbox" class="ingredient" value="Bread"> <img class="ingredient-image" src="bread.png" alt="Bread"> Bread</label>
+                <label><input type="checkbox" class="ingredient" value="Lettuce"> <img class="ingredient-image" src="lettuce.png" alt="Lettuce"> Lettuce</label>
+                <label><input type="checkbox" class="ingredient" value="Tomato"> <img class="ingredient-image" src="tomato.png" alt="Tomato"> Tomato</label>
+                <label><input type="checkbox" class="ingredient" value="Meat"> <img class="ingredient-image" src="meat.png" alt="Meat"> Meat</label>
+                <label><input type="checkbox" class="ingredient" value="Cheese"> <img class="ingredient-image" src="cheese.png" alt="Cheese"> Cheese</label>
+                <label><input type="checkbox" class="ingredient" value="Onions"> <img class="ingredient-image" src="onions.png" alt="Onions"> Onions</label>
+            </div>
+            <label>Set Toasting Time (seconds): <input type="number" id="toastingTimeInput" value="5"></label>
+            <button onclick="setTimer()">Set Timer</button>
+            <button onclick="cookSandwich()">Cook Sandwich</button>
+        </div>
+
+        <div id="toaster">
+            <div id="lights">
+                <div id="redLight" class="light"></div>
+                <div id="yellowLight" class="light"></div>
+            </div>
+            <canvas id="sandwichCanvas" width="400" height="300"></canvas>
+        </div>
+
+        <div id="timerBox" style="display:none;">
+            <h2>Timer: <span id="timerDisplay"></span> seconds</h2>
+        </div>
+
+        <div id="output">
+            <div id="status"></div>
+            <div id="fuzzyResult"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
